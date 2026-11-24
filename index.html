@@ -1,0 +1,41 @@
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="PuppiLOVE: un mundo acogedor donde podrás cuidar, jugar y crecer junto a tu mascota."
+    />
+
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <meta name="theme-color" content="#fff0e8" />
+
+    <title>PuppiLOVE — Tu pequeño mundo de mascotas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main id="welcome" class="welcome">
+      <header class="welcome-brand">PuppiLOVE <span>♡</span></header>
+      <section class="welcome-hero">
+        <div class="welcome-copy"><p class="eyebrow">UN PEQUEÑO MUNDO LLENO DE AMOR</p><h1>Un hogar para Toby.</h1><p>Cuida a tu cachorro, explora su habitación y crece junto a él en una aventura tranquila y acogedora.</p><button id="start-game" type="button">Jugar con Toby</button><p class="welcome-note">Tu progreso se guarda en este navegador.</p></div>
+        <div class="welcome-art"><img src="%BASE_URL%favicon.svg" alt="Ilustración de un cachorro dorado" width="240" height="240"></div>
+      </section>
+      <section class="welcome-features" aria-label="Características"><article><h2>Cuida</h2><p>Alimenta, baña y acompaña a Toby.</p></article><article><h2>Explora</h2><p>Interactúa con su habitación y sus juguetes.</p></article><article><h2>Crece</h2><p>Gana experiencia, monedas y accesorios.</p></article></section>
+      <footer>Proyecto independiente · JavaScript · Phaser · Vite</footer>
+    </main>
+    <section id="play-view" hidden aria-label="Juego PuppiLOVE"><div id="game-container"></div><p class="mobile-hint">Para una mejor experiencia, gira el dispositivo en horizontal.</p></section>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
