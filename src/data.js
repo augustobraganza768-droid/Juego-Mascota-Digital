@@ -1,0 +1,12 @@
+export const rooms=['Isla del Hogar','Bosque de las Luciérnagas','Lago de los Sueños','Valle de las Hadas','Isla de Cristal','Cumbres de Nieve','Reino de las Nubes','Santuario Lunar'];
+export const levels=[1,5,10,15,20,25,35,45];
+export const pets=['Toby','Luna','Bruno','Mochi','Nube','Kitsu','Musgo','Aura'];
+export const slots=['head','neck','body','back','paws'];
+export const products=[['collar','Collar de estrellas',35,'accessory','neck','📿'],['bandana','Pañuelo lunar',45,'accessory','neck','🎀'],['hat','Sombrero de mago',65,'accessory','head','🎩'],['flower','Flores encantadas',25,'decor'],['lamp','Farol de hadas',40,'decor'],['tree','Árbol de cristal',55,'decor'],['rug','Alfombra bordada',30,'decor'],['food','Golosina',10,'food']];
+const themes=['Aurora','Lunar','Floral','Cristal','Celestial','Bosque'];
+for(const [i,t] of themes.entries())for(const [j,[n,k,e]] of [['Corona','head','👑'],['Collar','neck','📿'],['Capa','body','🎀'],['Alas','back','🪽'],['Botas','paws','👢']].entries())products.push([`acc${i}-${j}`,`${n} ${t}`,45+i*35+j*5,'accessory',k,e]);
+for(const [i,n] of ['Sillón','Mesa','Fuente','Maceta','Banco','Estante','Cojín','Farol','Estanque','Puente','Escultura','Cesta','Reloj','Espejo','Cortina','Alfombra','Cama','Comedero','Bañera','Cofre','Árbol','Arco','Seto','Pérgola','Molino','Fogata','Lámpara','Jardinera','Hamaca','Casita'].entries())products.push([`decor${i}`,n,30+i*5,'decor',null,['🪑','🪴','⛲','🌷','🪵','📚','🛋️','🏮'][i%8]]);
+for(const [i,n] of ['Manzana','Galleta','Miel','Pera','Zanahoria','Fresa','Pan'].entries())products.push([`food${i}`,n,10+i*2,'food']);
+import {recover,persist} from './save.js';
+export const load=(slot,initial)=>recover(localStorage,slot,initial);
+export const write=(slot,state)=>persist(localStorage,slot,state);
